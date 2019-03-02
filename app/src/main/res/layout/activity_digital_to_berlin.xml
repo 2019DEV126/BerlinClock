@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/value_20"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/textDigitalTimeToBerlinTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_digital_time_to_berlin_time"
+        style="@android:style/TextAppearance.Large"/>
+
+    <include layout="@layout/berlin_clock_layout"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+    </include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/value_50"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/inputDigitalTimeHours"
+            android:layout_width="@dimen/value_0"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/value_10"
+            android:hint="@string/text_hours"
+            android:gravity="center"
+            android:textSize="@dimen/text_20"
+            android:inputType="numberDecimal"/>
+
+        <EditText
+            android:id="@+id/inputDigitalTimeMinutes"
+            android:layout_width="@dimen/value_0"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/value_10"
+            android:hint="@string/text_minutes"
+            android:gravity="center"
+            android:textSize="@dimen/text_20"
+            android:inputType="numberDecimal"/>
+
+        <EditText
+            android:id="@+id/inputDigitalTimeSeconds"
+            android:layout_width="@dimen/value_0"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/value_10"
+            android:hint="@string/text_seconds"
+            android:gravity="center"
+            android:textSize="@dimen/text_20"
+            android:inputType="numberDecimal"/>
+
+    </LinearLayout>
+
+</LinearLayout>
