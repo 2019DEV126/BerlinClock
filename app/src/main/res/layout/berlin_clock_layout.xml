@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_margin="@dimen/value_20"
+    android:layout_margin="@dimen/value_10"
     android:gravity="center">
 
     <Button

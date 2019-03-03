@@ -39,6 +39,7 @@ public class BerlinToDigitalActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_berlin_to_digital);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         buttonSeconds = findViewById(R.id.buttonSeconds);
         buttonSeconds.setOnClickListener(new View.OnClickListener() {
             @Override
