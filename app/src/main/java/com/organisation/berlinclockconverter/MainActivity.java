@@ -12,7 +12,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         Button buttonDigitalToBerlin = findViewById(R.id.buttonDigitalToBerlin);
         buttonDigitalToBerlin.setOnClickListener(new View.OnClickListener() {
             @Override

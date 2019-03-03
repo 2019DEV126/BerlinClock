@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">BerlinClockConverter</string>
     <string name="text_berlin_time_to_digital_time">Choose the Berlin Time by pressing the seconds, hours and minutes buttons and get the time in its digital format</string>
-    <string name="text_default_time">00:00:00</string>
+    <string name="text_default_time">00</string>
+    <string name="text_colon">:</string>
     <string name="text_digital_time_to_berlin_time">Choose the Digital Time by entering the hours, minutes and seconds, click the convert button and get its representation in Berlin clock format</string>
     <string name="text_hours">Hours</string>
     <string name="text_minutes">Minutes</string>
@@ -11,5 +12,7 @@
     <string name="text_convert">Convert</string>
     <string name="text_invalid_time_message">Invalid time, Please select the valid time in 24 hours format!</string>
     <string name="text_empty_field_message">One of the field is empty, please enter in all the fields!</string>
+    <string name="title_digital_to_berlin_conversion">Digital Time To Berlin Clock Converter</string>
+    <string name="title_berlin_to_digital_conversion">Berlin Clock To Digital Time Converter</string>
 
 </resources>

@@ -41,6 +41,7 @@ public class DigitalToBerlinActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_digital_to_berlin);
+        getSupportActionBar().setTitle(R.string.title_digital_to_berlin_conversion);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         buttonSeconds = findViewById(R.id.buttonSeconds);
         buttonSeconds.setEnabled(false);
