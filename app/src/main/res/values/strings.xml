@@ -7,8 +7,8 @@
     <string name="text_hours">Hours</string>
     <string name="text_minutes">Minutes</string>
     <string name="text_seconds">Seconds</string>
-    <string name="text_convert_digital_time_berlin_time">Convert Digital Time to Berlin Time</string>
-    <string name="text_convert_berlin_time_digital_time">Convert Berlin Time to Digital Time</string>
+    <string name="text_convert_digital_time_berlin_time">Convert Digital Time to Berlin Clock</string>
+    <string name="text_convert_berlin_time_digital_time">Convert Berlin Clock to Digital Time</string>
     <string name="text_convert">Convert</string>
     <string name="text_invalid_time_message">Invalid time, Please select the valid time in 24 hours format!</string>
     <string name="text_empty_field_message">One of the field is empty, please enter in all the fields!</string>

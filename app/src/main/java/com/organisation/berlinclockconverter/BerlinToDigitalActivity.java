@@ -35,6 +35,7 @@ public class BerlinToDigitalActivity extends AppCompatActivity {
     TextView textDigitalTimeHours;
     TextView textDigitalTimeMinutes;
     TextView textDigitalTimeSeconds;
+
     int hours;
 
     @Override
@@ -278,6 +279,15 @@ public class BerlinToDigitalActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * This function is used for setting digital time value in Minutes TextView after user
+     * selects any block of Minutes from Berlin clock.
+     *
+     * @param textViewTime  : time before user selected new time
+     * @param isTimeChecked : true if that block of berlin clock is checked else false
+     * @param blockValue    : integer value of that block type i.e 5 for five minutes block selected and 1 for one
+     *                      one minute block selected.
+     */
     private void setTime(TextView textViewTime, boolean isTimeChecked, int blockValue) {
         if (isTimeChecked) {
             textViewTime.setText(String.format("%02d", (Integer.valueOf(textViewTime.getText().toString()) + blockValue)));

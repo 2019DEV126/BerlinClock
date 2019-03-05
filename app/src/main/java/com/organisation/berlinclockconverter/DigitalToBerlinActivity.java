@@ -8,6 +8,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class DigitalToBerlinActivity extends AppCompatActivity {
+
     Button buttonSeconds;
     Button buttonHoursFiveOne;
     Button buttonHoursFiveTwo;
@@ -44,61 +45,37 @@ public class DigitalToBerlinActivity extends AppCompatActivity {
         getSupportActionBar().setTitle(R.string.title_digital_to_berlin_conversion);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         buttonSeconds = findViewById(R.id.buttonSeconds);
-        buttonSeconds.setEnabled(false);
         buttonHoursFiveOne = findViewById(R.id.buttonHoursFiveOne);
-        buttonHoursFiveOne.setEnabled(false);
         buttonHoursFiveTwo = findViewById(R.id.buttonHoursFiveTwo);
-        buttonHoursFiveTwo.setEnabled(false);
         buttonHoursFiveThree = findViewById(R.id.buttonHoursFiveThree);
-        buttonHoursFiveThree.setEnabled(false);
         buttonHoursFiveFour = findViewById(R.id.buttonHoursFiveFour);
-        buttonHoursFiveFour.setEnabled(false);
         buttonHoursOneOne = findViewById(R.id.buttonHoursOneOne);
-        buttonHoursOneOne.setEnabled(false);
         buttonHoursOneTwo = findViewById(R.id.buttonHoursOneTwo);
-        buttonHoursOneTwo.setEnabled(false);
         buttonHoursOneThree = findViewById(R.id.buttonHoursOneThree);
-        buttonHoursOneThree.setEnabled(false);
         buttonHoursOneFour = findViewById(R.id.buttonHoursOneFour);
-        buttonHoursOneFour.setEnabled(false);
         buttonMinutesFiveOne = findViewById(R.id.buttonMinutesFiveOne);
-        buttonMinutesFiveOne.setEnabled(false);
         buttonMinutesFiveTwo = findViewById(R.id.buttonMinutesFiveTwo);
-        buttonMinutesFiveTwo.setEnabled(false);
         buttonMinutesFiveThree = findViewById(R.id.buttonMinutesFiveThree);
-        buttonMinutesFiveThree.setEnabled(false);
         buttonMinutesFiveFour = findViewById(R.id.buttonMinutesFiveFour);
-        buttonMinutesFiveFour.setEnabled(false);
         buttonMinutesFiveFive = findViewById(R.id.buttonMinutesFiveFive);
-        buttonMinutesFiveFive.setEnabled(false);
         buttonMinutesFiveSix = findViewById(R.id.buttonMinutesFiveSix);
-        buttonMinutesFiveSix.setEnabled(false);
         buttonMinutesFiveSeven = findViewById(R.id.buttonMinutesFiveSeven);
-        buttonMinutesFiveSeven.setEnabled(false);
         buttonMinutesFiveEight = findViewById(R.id.buttonMinutesFiveEight);
-        buttonMinutesFiveEight.setEnabled(false);
         buttonMinutesFiveNine = findViewById(R.id.buttonMinutesFiveNine);
-        buttonMinutesFiveNine.setEnabled(false);
         buttonMinutesFiveTen = findViewById(R.id.buttonMinutesFiveTen);
-        buttonMinutesFiveTen.setEnabled(false);
         buttonMinutesFiveEleven = findViewById(R.id.buttonMinutesFiveEleven);
-        buttonMinutesFiveEleven.setEnabled(false);
         buttonMinutesOneOne = findViewById(R.id.buttonMinutesOneOne);
-        buttonMinutesOneOne.setEnabled(false);
         buttonMinutesOneTwo = findViewById(R.id.buttonMinutesOneTwo);
-        buttonMinutesOneTwo.setEnabled(false);
         buttonMinutesOneThree = findViewById(R.id.buttonMinutesOneThree);
-        buttonMinutesOneThree.setEnabled(false);
         buttonMinutesOneFour = findViewById(R.id.buttonMinutesOneFour);
-        buttonMinutesOneFour.setEnabled(false);
         editTextHours = findViewById(R.id.inputDigitalTimeHours);
         editTextMinutes = findViewById(R.id.inputDigitalTimeMinutes);
         editTextSeconds = findViewById(R.id.inputDigitalTimeSeconds);
         buttonConvert = findViewById(R.id.buttonConvert);
-        buttonHoursFiveTwo.setEnabled(false);
         buttonConvert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Resetting the Berlin clock view
                 buttonSeconds.setSelected(false);
                 buttonHoursFiveOne.setSelected(false);
                 buttonHoursFiveTwo.setSelected(false);
@@ -123,6 +100,7 @@ public class DigitalToBerlinActivity extends AppCompatActivity {
                 buttonMinutesOneTwo.setSelected(false);
                 buttonMinutesOneThree.setSelected(false);
                 buttonMinutesOneFour.setSelected(false);
+                // Processing the data in Hours, Minutes and Seconds edit field.
                 if (editTextHours.getText().toString().isEmpty() ||
                         editTextMinutes.getText().toString().isEmpty() ||
                         editTextSeconds.getText().toString().isEmpty()) {
@@ -145,6 +123,12 @@ public class DigitalToBerlinActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * This is a callback implemented to be called from DigitalToBerlinTimeTask after it processes the digital
+     * time data, to lit the blocks of Berlin clock.
+     *
+     * @param berlinTimeOutput It contains data information to lit the blocks.
+     */
     protected void onConversionFromDigitalToBerlin(BerlinTimeOutput berlinTimeOutput) {
         buttonSeconds.setSelected(berlinTimeOutput.isEvenSeconds);
         switch (berlinTimeOutput.numberOfFiveHoursBlocksOn) {
